@@ -37,11 +37,13 @@ div.content-960 img
 	width: auto;
 	height: auto;
 }
+
 .full-width img
 {	
 width: 100%;
 height: auto;
 }
+
 /*MENU*/
 .menu-logo
 {
@@ -167,17 +169,43 @@ h1.big-tittle
 {
 text-align: top;
 font-size: 120px;
-line-height: 100px;
 font-weight: 700;
 letter-spacing: -5px;
 color: #ffffff;
 }
+
+/*HOME*/
+h1.big-date
+{
+text-align: top;
+font-size: 50px;
+font-weight: 700;
+margin-top: 30px;
+letter-spacing: -2px;
+color: #ffffff;
+}
+
+
+
+h1.big-countdown
+{
+text-align: top;
+font-size: 40px;
+margin-top: 40px;
+line-height: 20px;
+font-weight: 700;
+color: #ffffff;
+letter-spacing: -2px;
+}
+
+
 h2.big-tittle-description
 {
 	max-width: 450px;
 	color: #ffffff;
 	font-weight: 400;
 }
+
 /*END HOME*/
 
 /*SERVICE*/
@@ -534,7 +562,8 @@ input[type=checkbox] {
 
 ul#register-form li #name, ul#register-form li #email, ul#register-form li #school, ul#register-form li #dietary, ul#register-form li #githuburl, ul#register-form li #username, ul#register-form li #password, ul#register-form li #passwordconfirm
 {
-	width: 408px;
+	max-width: 408px;
+  width: 90%;
 	border: 0;
 	padding-top:13px;
 	padding-bottom:13px;
@@ -581,7 +610,7 @@ ul#register-form li #send-message
 }
 .footer-content
 {
-padding: 10px 0;
+padding: 80px 0;
 }
 .footer-content .title-separator
 {
@@ -603,7 +632,7 @@ cursor: pointer;
 }
 .footer-copyright
 {
-padding: 20px 0;
+padding-top: 20px;
 color: #d9d9d9;
 font-size: 14px;
 }
@@ -929,3 +958,9 @@ img.register-button:hover {
 	padding-bottom: 100px;
 	padding-top: 5px;
 }
+
+img#sponsors {
+  max-width: 960px;
+  width: 100%;
+}
+

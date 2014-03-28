@@ -1,11 +1,42 @@
 jQuery(document).ready(function() {
 
+    function pad(n) {
+      return (n < 10) ? ("0" + n) : n;
+    }
+
+    var countto = 1396717200;
+
+    function updateTime () {
+      var timeto = Math.floor(countto - (Date.now() / 1000));
+      var days = Math.floor(timeto / (60 * 60 * 24));
+      timeto -= (days * 60 * 60 * 24);
+
+      var hours = Math.floor(timeto / (60 * 60));
+      timeto -= (hours * 60 * 60);
+
+      var minutes = Math.floor(timeto / (60));
+      timeto -= (minutes * 60);
+
+
+      //$('.big-countdown').html(pad(days) + " days. " + pad(hours) + " hours. <br>" + pad(minutes) + " minutes. " + pad(timeto) + " seconds. ");
+      $('.big-countdown').html(pad(days) + "d " + pad(hours) + "h " + pad(minutes) + "m " + pad(timeto) + "s ");
+    }
+
+    updateTime();
+
+    setInterval(updateTime, 1000);
+
+    jQuery(".home").height(jQuery(window).height() - 150);
+
+/*
     //Set home section to be always full screen
     if (jQuery(window).height() > jQuery("#dry-home").innerHeight()) {
         jQuery(".home").height(jQuery(window).height() - 150);
     } else {
         jQuery(".home").height('auto');
     }
+
+    */
 
     displayHints();
 
@@ -355,11 +386,19 @@ jQuery(window).resize(function() {
         //don't set a full screen in IE8
     } else {
         //Set home section to be always full screen
+        //
+        jQuery(".home").height(jQuery(window).height() - 150);
+      
+      /* not sure I understand what this logic was supposed to do
         if (jQuery(window).height() > jQuery("#dry-home").innerHeight()) {
             jQuery(".home").height(jQuery(window).height() - 150);
+            console.log("a");
         } else {
             jQuery(".home").height('auto');
+            console.log("b");
         }
+        */
+        
     }
 
 });
